@@ -207,6 +207,60 @@ class _MyAppState extends State<MyApp> {
       navigatorKey: navigatorKey,
       theme: CupertinoThemeData(brightness: mode),
       debugShowCheckedModeBanner: false,
+      home: CupertinoPageScaffold(
+        navigationBar: CupertinoNavigationBar(
+          middle: Text("Weather App"),
+          trailing: CupertinoButton(
+            padding: EdgeInsets.zero,
+            child: Icon(CupertinoIcons.settings, color: darkColor),
+            onPressed: () {
+              navigatorKey.currentState?.push(
+                CupertinoPageRoute(
+                  builder:
+                      (context) => Settings(
+                        onLocationChanged: updateLocation,
+                        onColorChanged: updateColor,
+                        onChangeMode: updateMode,
+                        onChangeMetric: updateMetric,
+                      ),
+                ),
+              );
+            },
+          ),
+        ),
+
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    SizedBox(height: 40),
+                    Text(
+                      "My Location",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 40,
+                      ),
+                    ),
+
+                    city == "Loading..."
+                        ? CupertinoActivityIndicator()
+                        : Text('$city', style: TextStyle(fontSize: 20)),
+
+                    SizedBox(height: 10),
+                    Text("$temperature", style: TextStyle(fontSize: 30)),
+                    SizedBox(height: 10),
+                    Icon(weather, color: colorIcon, size: 100),
+                    SizedBox(height: 50),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
