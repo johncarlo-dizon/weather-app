@@ -577,6 +577,66 @@ class _SettingsState extends State<Settings> {
                       ),
                     ],
                   ),
+
+                  //THIRD LINE
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: CupertinoColors.systemFill,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.thermometer,
+                                size: 20,
+                                color: CupertinoColors.systemGrey,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                "Celcius °C",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: darkColor,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            CupertinoSwitch(
+                              value: isCelsius,
+                              onChanged: (bool value) {
+                                setState(() {
+                                  isCelsius = value;
+                                });
+                                widget.onChangeMetric(isCelsius);
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  //END
                 ],
               ),
             ),
