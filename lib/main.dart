@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:weather_app/settings.dart';
 
 void main() {
-  runApp(MyApp()); // Wrap everything in the main widget
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
 
   void updateMetric(bool newValue) {
     setState(() {
-      newMetric = newValue; // Update the value of Celsius/Fahrenheit
+      newMetric = newValue;
       print(newMetric);
     });
   }
@@ -107,11 +107,9 @@ class _MyAppState extends State<MyApp> {
         feelslike = weatherData["main"]["feels_like"] - 273.15;
 
         if (newMetric) {
-          // For Celsius
           temperature = tempInCelsius.toStringAsFixed(1) + "°C";
           feels = feelslike.toStringAsFixed(1) + "°C";
         } else {
-          // For Fahrenheit
           temperature =
               ((tempInCelsius * 9 / 5) + 32).toStringAsFixed(1) + "°F";
           feels = ((feelslike * 9 / 5) + 32).toStringAsFixed(1) + "°F";
@@ -205,6 +203,10 @@ class _MyAppState extends State<MyApp> {
       wind = "°°°°";
     }
 
-    return CupertinoApp();
+    return CupertinoApp(
+      navigatorKey: navigatorKey,
+      theme: CupertinoThemeData(brightness: mode),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
