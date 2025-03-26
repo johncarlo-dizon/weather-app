@@ -635,7 +635,70 @@ class _SettingsState extends State<Settings> {
                       ),
                     ],
                   ),
+                  //FOURTH LINE
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: CupertinoColors.systemFill,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.moon_circle,
+                                size: 20,
+                                color: CupertinoColors.systemGrey,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                "Dark Mode",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: darkColor,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
 
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            CupertinoSwitch(
+                              value: isDark,
+                              onChanged: (bool value) {
+                                setState(() {
+                                  if (value == true) {
+                                    mode = Brightness.dark;
+                                    darkColor = CupertinoColors.white;
+                                  } else {
+                                    mode = Brightness.light;
+                                    darkColor = CupertinoColors.black;
+                                  }
+                                  widget.onChangeMode(mode); //
+                                  isDark = value;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                   //END
                 ],
               ),
