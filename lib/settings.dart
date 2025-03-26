@@ -699,6 +699,287 @@ class _SettingsState extends State<Settings> {
                       ),
                     ],
                   ),
+
+                  //FIFTH LINE
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: CupertinoColors.systemFill,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.profile_circled,
+                                size: 20,
+                                color: CupertinoColors.systemGrey,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                "Team Developer",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: darkColor,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            CupertinoSwitch(
+                              value: showDeveloper,
+                              onChanged: (bool value) {
+                                setState(() {
+                                  showDeveloper = value;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  showDeveloper
+                      ? Column(
+                        children: [
+                          SizedBox(height: 5),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: CupertinoColors.systemFill,
+                              image:
+                                  MediaQuery.of(context).size.width > 320
+                                      ? DecorationImage(
+                                        image: AssetImage('images/aaron.jpg'),
+                                        alignment: Alignment.centerRight,
+                                        fit: BoxFit.contain,
+                                      )
+                                      : null,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Avendano, Aaron Jireh",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Quality Assurance Tester",
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 3),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: CupertinoColors.systemFill,
+                              image:
+                                  MediaQuery.of(context).size.width > 320
+                                      ? DecorationImage(
+                                        image: AssetImage('images/joseph.jpg'),
+                                        alignment: Alignment.centerRight,
+                                        fit: BoxFit.contain,
+                                      )
+                                      : null,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Basilio, Joseph Lee",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "UI/UX Designer",
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 3),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: CupertinoColors.systemFill,
+                              image:
+                                  MediaQuery.of(context).size.width > 320
+                                      ? DecorationImage(
+                                        image: AssetImage('images/joel.jpg'),
+                                        alignment: Alignment.centerRight,
+                                        fit: BoxFit.contain,
+                                      )
+                                      : null,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Dizon, Joel",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Quality Assurance Tester",
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 3),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: CupertinoColors.systemFill,
+                              image:
+                                  MediaQuery.of(context).size.width > 320
+                                      ? DecorationImage(
+                                        image: AssetImage('images/jc.jpg'),
+                                        alignment: Alignment.centerRight,
+                                        fit: BoxFit.contain,
+                                      )
+                                      : null,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Dizon, John Carlo",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Software Developer",
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 3),
+
+                          Container(
+                            padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: CupertinoColors.systemFill,
+                              image:
+                                  MediaQuery.of(context).size.width > 320
+                                      ? DecorationImage(
+                                        image: AssetImage('images/jomel.jpg'),
+                                        alignment: Alignment.centerRight,
+                                        fit: BoxFit.contain,
+                                      )
+                                      : null,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Simbillio, Jomel",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "UI/UX Designer",
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: darkColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                      : SizedBox.shrink(),
+
                   //END
                 ],
               ),
