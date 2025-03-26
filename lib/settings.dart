@@ -980,6 +980,70 @@ class _SettingsState extends State<Settings> {
                       )
                       : SizedBox.shrink(),
 
+                  //SIXTH LINE
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: CupertinoColors.systemFill,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.info_circle,
+                                size: 20,
+                                color: CupertinoColors.systemGrey,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                "About",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: darkColor,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        width: MediaQuery.of(context).size.width * 0.40,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              "Version: 1.0",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: darkColor,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+
+                            SizedBox(width: 10),
+                            Icon(
+                              CupertinoIcons.chevron_right,
+                              size: 20,
+                              color: CupertinoColors.systemGrey,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                   //END
                 ],
               ),
