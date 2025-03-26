@@ -305,6 +305,101 @@ class _MyAppState extends State<MyApp> {
                     ),
 
                     SizedBox(height: 30),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.30,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "$windDirection wind",
+                                    style: TextStyle(
+                                      color: CupertinoColors.inactiveGray,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text("$wind", style: TextStyle(fontSize: 25)),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 100),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.30,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Cloud Cover",
+                                  style: TextStyle(
+                                    color: CupertinoColors.inactiveGray,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                Text(
+                                  "$cloud",
+                                  style: TextStyle(fontSize: 25),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    SizedBox(height: 30),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.30,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Visibility",
+                                    style: TextStyle(
+                                      color: CupertinoColors.inactiveGray,
+                                    ),
+                                  ),
+                                  Text(
+                                    "$visibility",
+                                    style: TextStyle(fontSize: 25),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 100),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.30,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Air Pressure",
+                                  style: TextStyle(
+                                    color: CupertinoColors.inactiveGray,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                Text(
+                                  "$pressure",
+                                  style: TextStyle(fontSize: 25),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
