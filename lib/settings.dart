@@ -110,7 +110,7 @@ class _SettingsState extends State<Settings> {
 
                                   actions: [
                                     CupertinoButton(
-                                      child: Text("Save"),
+                                      child: Text("Done"),
                                       onPressed: () {
                                         setState(() {
                                           widget.onLocationChanged(

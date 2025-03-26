@@ -209,7 +209,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          middle: Text("Weather App"),
+          middle: Text("Weather"),
           trailing: CupertinoButton(
             padding: EdgeInsets.zero,
             child: Icon(CupertinoIcons.settings, color: darkColor),
@@ -268,36 +268,45 @@ class _MyAppState extends State<MyApp> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.30,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Feels like",
-                                  style: TextStyle(
-                                    color: CupertinoColors.inactiveGray,
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.30,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Feels like",
+                                    style: TextStyle(
+                                      color: CupertinoColors.inactiveGray,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                ),
-                                Text("$feels", style: TextStyle(fontSize: 25)),
-                              ],
+                                  Text("$feels", style: TextStyle(fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                          SizedBox(width: 100),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.30,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Humidity",
-                                  style: TextStyle(
-                                    color: CupertinoColors.inactiveGray,
+                          SizedBox(width: 50),
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.30,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Humidity",
+                                    style: TextStyle(
+                                      color: CupertinoColors.inactiveGray,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                ),
-                                Text(
-                                  "$humidity",
-                                  style: TextStyle(fontSize: 25),
-                                ),
-                              ],
+                                  Text(
+                                    "$humidity",
+                                    style: TextStyle(fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -322,29 +331,33 @@ class _MyAppState extends State<MyApp> {
                                     ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
-                                  Text("$wind", style: TextStyle(fontSize: 25)),
+                                  Text("$wind", style: TextStyle(fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ],
                               ),
                             ),
                           ),
-                          SizedBox(width: 100),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.30,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Cloud Cover",
-                                  style: TextStyle(
-                                    color: CupertinoColors.inactiveGray,
+                          SizedBox(width: 50),
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.30,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Cloud Cover",
+                                    style: TextStyle(
+                                      color: CupertinoColors.inactiveGray,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                Text(
-                                  "$cloud",
-                                  style: TextStyle(fontSize: 25),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
+                                  Text(
+                                    "$cloud",
+                                    style: TextStyle(fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -368,33 +381,37 @@ class _MyAppState extends State<MyApp> {
                                     style: TextStyle(
                                       color: CupertinoColors.inactiveGray,
                                     ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                   Text(
                                     "$visibility",
                                     style: TextStyle(fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ],
                               ),
                             ),
                           ),
-                          SizedBox(width: 100),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.30,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Air Pressure",
-                                  style: TextStyle(
-                                    color: CupertinoColors.inactiveGray,
+                          SizedBox(width: 50),
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.30,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Air Pressure",
+                                    style: TextStyle(
+                                      color: CupertinoColors.inactiveGray,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                Text(
-                                  "$pressure",
-                                  style: TextStyle(fontSize: 25),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
+                                  Text(
+                                    "$pressure",
+                                    style: TextStyle(fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
