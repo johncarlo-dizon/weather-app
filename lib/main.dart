@@ -254,6 +254,57 @@ class _MyAppState extends State<MyApp> {
                     SizedBox(height: 10),
                     Icon(weather, color: colorIcon, size: 100),
                     SizedBox(height: 50),
+
+                    Row(
+                      children: [
+                        Text("Weather details", style: TextStyle(fontSize: 14)),
+                      ],
+                    ),
+
+                    SizedBox(height: 30),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.30,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Feels like",
+                                  style: TextStyle(
+                                    color: CupertinoColors.inactiveGray,
+                                  ),
+                                ),
+                                Text("$feels", style: TextStyle(fontSize: 25)),
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 100),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.30,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Humidity",
+                                  style: TextStyle(
+                                    color: CupertinoColors.inactiveGray,
+                                  ),
+                                ),
+                                Text(
+                                  "$humidity",
+                                  style: TextStyle(fontSize: 25),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    SizedBox(height: 30),
                   ],
                 ),
               ),
