@@ -20,7 +20,6 @@ String windDirection = "N";
 Color colorIcon = CupertinoColors.systemPurple;
 Brightness mode = Brightness.dark;
 bool isDark = true;
-bool showDeveloper = false;
 Color darkColor = CupertinoColors.white;
 
 bool isCelsius = true;
